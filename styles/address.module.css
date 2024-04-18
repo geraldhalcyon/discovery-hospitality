@@ -1,0 +1,6 @@
+.body a {
+  color: var(--primary);
+}
+.body p:not(:last-of-type) {
+  margin-bottom: 15px;
+}

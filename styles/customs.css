@@ -1,0 +1,42 @@
+.description {
+  line-height: 21px;
+}
+.description > p:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.description ol,
+.description ul {
+  padding-left: 18px;
+}
+.description h1,
+.description h2,
+.description h3,
+.description h4,
+.description h5,
+.description h6 {
+  color: var(--primary);
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.description iframe {
+  width: 100%;
+  min-height: 400px;
+}
+.description table td {
+  padding: 10px;
+  color: #000;
+}
+.description table tr:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}
+.description li {
+  margin-bottom: 5px;
+}
+
+.description a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--primary);
+}

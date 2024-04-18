@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary: #691a31;
+  --primary1: #85764d;
+  --secondary: #86764e;
+  --secondary1: #c5baa6;
+  --secondary2: #d4bebe;
+  --secondary3: #99656a;
+  --dropdownBorder: #ebbbc9;
+}
+
+.st-1 #header .active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  display: block;
+  flex: 0 0 100%;
+  position: absolute;
+  bottom: -5px;
+}
+
+.font-domine {
+  font-family: "Domine", sans-serif;
+}
+.font-tenor {
+  font-family: "Tenor", sans-serif;
+}
+.carousel-gallery * {
+  line-height: 0;
+}
+
+.carousel-gallery .slick-slide {
+  margin-left: 10px;
+}
+
+.carousel-gallery .slick-list {
+  margin-left: -15px;
+}
+.carousel-gallery .slick-track {
+  display: flex;
+}
+@layer utilities {
+  .block-slider .slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+  }
+  .block-slider .slick-dots li {
+    padding: 0 3px;
+  }
+  .block-slider .slick-dots .slick-active button {
+    transform: scale(1.1);
+    transition: all ease 0.3s;
+  }
+  .block-slider .slick-dots button {
+    width: 7px;
+    height: 7px;
+    text-indent: -9999px;
+    border-radius: 100%;
+    background-color: #ccc;
+    transition: all ease 0.3s;
+  }
+
+  /* .react-select {
+    text-transform: uppercase;
+  } */
+  .react-select,
+  .react-select * {
+    color: var(--primary) !important;
+  }
+  .react-select > div {
+    border: 1px solid var(--dropdownBorder) !important;
+    outline: none;
+    border-radius: 0;
+    min-height: 60px;
+    outline: none;
+    box-shadow: none !important;
+    font-size: 18px;
+    font-family: "Tenor", sans-serif;
+    letter-spacing: 1px;
+  }
+  .react-select > div > div:nth-child(2) > span {
+    display: none;
+  }
+
+  .connections .even img {
+    max-width: 65px;
+  }
+
+  ul,
+  ol {
+    list-style-position: inside !important;
+    padding-left: 15px;
+  }
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #header-mobile {
+    transform: translateX(-100%);
+    transition: all ease 0.3s;
+  }
+
+  .mobile-menu-opened #header-mobile {
+    transform: translateX(0);
+    transition: all ease 0.3s;
+  }
+
+  .referral {
+    display: none !important;
+    position: fixed;
+    left: -99999px;
+    height: 0;
+    width: 0;
+  }
+  @media (max-width: 1199px) {
+    .mobile-menu-opened {
+      overflow: hidden !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    .st-1 .container {
+      max-width: 980px;
+    }
+    .st-2 .container {
+      max-width: 1200px;
+    }
+  }
+}
+
+@layer base {
+  .book-modal .modal-content {
+    animation: modalIn 0.3s;
+  }
+
+  .slide-fill .slick-list,
+  .slide-fill .slick-list div {
+    height: 100% !important;
+  }
+  .remove-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #header .dropdown:hover > div > .dropdown-menu,
+  #header .dropdown .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: inherit;
+    transform: translateY(0);
+    transition: all ease 0.3s;
+  }
+  #header .dropdown-menu {
+    transform: translateY(10px);
+    transition: all ease 0.3s;
+  }
+  #header .dropdown-menu .dropdown-menu {
+    top: -10px !important;
+    padding-top: 0 !important;
+    left: 100% !important;
+  }
+  #header .dropdown-menu .dropdown-menu > div {
+    border-left: 3px solid var(--primary);
+  }
+
+  #header .dropdown-menu .dropdown-menu .caret {
+    display: none;
+  }
+}
+
+.prev {
+  transform: translateX(-200%);
+  transition: all ease 0.1s;
+  opacity: 0;
+  visibility: hidden;
+}
+.current {
+  transform: translateX(0);
+  transition: all ease 0.3s;
+}
+
+.next {
+  transform: translateX(100%);
+  transition: all ease 0.3s;
+}
+
+.children {
+  position: fixed;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  top: 80px;
+  transform: translateX(100%);
+  width: 100%;
+  z-index: 1;
+}
+.children.current {
+  right: 0;
+  transform: translateX(0);
+  transition: all ease 0.4s;
+  opacity: 1;
+  visibility: inherit;
+}
+.children.animating {
+  transform: translateX(-30%);
+  transition: all ease 0.3s;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+}
+
+.footer-reviews .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 15px 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer-reviews .slick-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all ease 0.3s;
+  text-indent: -9999px;
+  transition: all ease 0.3s;
+}
+.footer-reviews .slick-dots li {
+  padding: 0 5px;
+}
+.footer-reviews .slick-active button {
+  transform: scale(1.2);
+  transition: all ease 0.3s;
+}
+
+@keyframes modalIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-wobble {
+  animation: wobble 1s;
+}
+#CookiebotWidget .CookiebotWidget-consent-details button,
+#CookiebotWidget #CookiebotWidget-buttons #CookiebotWidget-btn-withdraw {
+  color: var(--primary) !important;
+}
+
+#CookiebotWidget #CookiebotWidget-buttons #CookiebotWidget-btn-change {
+  background-color: var(--primary) !important;
+}
+
+#CookiebotWidget {
+  z-index: 10 !important;
+}
+#CookiebotWidgetUnderlay {
+  z-index: 9 !important;
+}
+#CookiebotWidget #CookiebotWidget-buttons #CookiebotWidget-btn-withdraw,
+#CookiebotWidget-btn-change {
+  border-color: var(--primary) !important;
+}
+#CookiebotWidget-widgetContent path,
+#CookiebotWidget .CookiebotWidget-logo svg circle {
+  fill: var(--primary) !important;
+}
+
+#nprogress .bar {
+  background: var(--primary) !important;
+}
+
+table td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+p {
+  margin-bottom: 15px;
+}

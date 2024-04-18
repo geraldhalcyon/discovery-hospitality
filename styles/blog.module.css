@@ -1,0 +1,9 @@
+.description h1,
+.description h2,
+.description h3 {
+  color: var(--primary);
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}

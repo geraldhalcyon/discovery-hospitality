@@ -1,0 +1,17 @@
+.buttonRepeater table {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .buttonRepeater > div:not(:last-of-type) {
+    border-right: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 767px) {
+  .buttonRepeater > div:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}

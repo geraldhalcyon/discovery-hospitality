@@ -1,0 +1,77 @@
+.description iframe {
+  min-height: 400px;
+  width: 100%;
+}
+.description h2,
+.description h3 {
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-family: "Tenor", sans-serif;
+}
+.description ul,
+.description ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.description p {
+  line-height: 21px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+.description strong {
+  margin-bottom: 20px;
+}
+/* .description ol,
+.description ul {
+  padding-left: 40px;
+} */
+.description li {
+  font-size: 14px;
+  line-height: 21px;
+}
+.description a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--primary);
+}
+.description td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.description table td p {
+  font-size: 20px;
+}
+.descriptionExperience table td {
+  padding: 15px;
+}
+.descriptionExperience {
+  font-size: 14px;
+  padding: 30px 0;
+}
+.descriptionExperience p:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+.descriptionExperience table td p:not(:first-child) {
+  font-size: 22px;
+}
+
+.descriptionExperience table td:not(:last-child) {
+  border-right: 1px solid #dee2e6;
+}
+.descriptionExperience h1,
+.descriptionExperience h2,
+.descriptionExperience h3,
+.descriptionExperience h4,
+.descriptionExperience h5 {
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 22px;
+  line-height: 37px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
