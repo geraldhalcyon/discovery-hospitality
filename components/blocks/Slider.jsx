@@ -122,7 +122,7 @@ export default function Slider({ block, mediaHandler }) {
   };
 
   return (
-    <div className="block-slider slider relative">
+    <div className="block-slider slider relative min-h-[calc(100dvh-165px)]">
       {slider_items && slider_items.length > 0 && (
         <Slick {...settings}>
           {slider_items?.map((item, index) => (
@@ -147,7 +147,7 @@ export default function Slider({ block, mediaHandler }) {
                 />
               </picture>
 
-              <div className="py-[80px] mx-w-[1200px] lg:py-[50px] min-h-[calc(100dvh-67px)] xl:min-h-[600px] xl:h-[560px] px-[30px] md:px-[100px] lg:px-[150px] w-full flex flex-col justify-center items-center text-white relative z-[3]">
+              <div className="py-[80px] mx-w-[1200px] lg:py-[50px] min-h-[calc(100dvh-165px)] px-[30px] md:px-[100px] lg:px-[150px] w-full flex flex-col justify-center items-center text-white relative z-[3]">
                 {item?.title && (
                   <div
                     className={`text-[35px] text-center md:text-[42px] mb-[15px] font-tenor`}

@@ -45,7 +45,7 @@ export default function Menu({ ...props }) {
     <>
       <header
         id="header"
-        className={`sticky top-0 z-[100] bg-white shadow-[0_2px_2px_-2px_rgba(0,0,0,.15)] min-h-[61px] flex flex-col justify-center items-end ${
+        className={`sticky top-0 z-[100] bg-white shadow-[0_2px_2px_-2px_rgba(0,0,0,.15)] min-h-[71px] flex flex-col justify-center items-end ${
           process.env.NEXT_PUBLIC_TEMPLATE == 2 ? "xl:pr-[15px]" : ""
         }`}
       >
